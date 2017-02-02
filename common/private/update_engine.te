@@ -2,3 +2,8 @@
 allow update_engine backuptool:process noatsecure;
 allow update_engine media_rw_data_file:file { open read getattr };
 
+# Read OTA zip file at /data/media/.
+allow update_engine media_rw_data_file:file { read open };
+
+allow update_engine { media_rw_data_file rootfs sdcardfs system_data_file system_file }:dir create_dir_perms;
+allow update_engine { media_rw_data_file rootfs sdcardfs system_data_file system_file }:{ file lnk_file } create_file_perms;
