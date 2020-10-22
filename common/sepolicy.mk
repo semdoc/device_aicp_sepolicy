@@ -26,10 +26,10 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     device/aicp/sepolicy/common/dynamic \
     device/aicp/sepolicy/common/system
 else
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     device/aicp/sepolicy/common/dynamic \
     device/aicp/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/lineage/sepolicy/legacy-common/sepolicy.mk
+-include device/aicp/sepolicy/legacy-common/sepolicy.mk
